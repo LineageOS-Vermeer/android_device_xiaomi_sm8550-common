@@ -640,6 +640,9 @@ vendor/lib64/libesesbprovision.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
+# eUICC - from lynx-user 14 UP1A.231005.007
+product/priv-app/EuiccGoogle/EuiccGoogle.apk|f1b7f3906ed81c6555191e6a9d350377b9710f11;PRESIGNED
+
 # Fingerprint
 odm/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so;MODULE_SUFFIX=_odm
 vendor/etc/vintf/manifest/fod.xml
@@ -1338,6 +1341,7 @@ product/app/uimgbaservice/uimgbaservice.apk|f78f2904b184e481c36ec430896fa5706927
 product/app/uimlpaservice/uimlpaservice.apk|e63dc9871ac691085f7e07530cc1ebf7d1656b81
 product/app/uimremoteclient/uimremoteclient.apk|489ddbd5435906818d0028c9d75158309b443847
 product/app/uimremoteserver/uimremoteserver.apk|00dcc969226a98e466fb7b90495826fc7aa9a494
+product/etc/permissions/lpa.xml
 product/etc/permissions/RemoteSimlock.xml|2496b81a85c2d86cbde7ec44458c97f76478f52e
 product/etc/permissions/RemoteSimlockManager.xml|5b459346f2de36f0632154c42cb16b8db03c2920
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml|42f4553b61731e56d253766554d4479519cea3ff
@@ -1350,6 +1354,7 @@ product/etc/permissions/vendor.qti.hardware.data.connectionaidl-V1-java.xml|28bd
 product/framework/remotesimlockmanagerlibrary.jar|936a77d31fea65269a5a36deac2334a422a6a1b8
 product/framework/uimgbalibrary.jar|fead0945eb7ee074030ae8703cdcc5441f21688b
 product/framework/uimgbamanagerlibrary.jar|a975d84c72d7d7facdadb54b69e57a8d495ec150
+product/framework/uimlpalibrary.jar
 product/framework/uimremoteclientlibrary.jar|390be715e5456c0897d027855adac4db211554ed
 product/framework/uimremoteserverlibrary.jar|48d3c61572e96b2d7e1534203cd8a732eb804e51
 product/framework/uimremotesimlocklibrary.jar|316ed4af2f7714e28fc89a2b091d1fad2d1ddf44

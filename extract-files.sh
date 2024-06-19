@@ -90,6 +90,9 @@ function blob_fixup() {
         vendor/lib64/c2.dolby.client.so)
             "${PATCHELF}" --add-needed "dolbycodec_shim.so" "${2}"
             ;;
+        vendor/etc/seccomp_policy/qwesd@2.0.policy)
+            echo "pipe2: 1" >> "${2}"
+            ;;
     esac
 }
 

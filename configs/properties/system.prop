@@ -8,3 +8,7 @@ ro.nfc.port=I2C
 
 # QTI
 ro.vendor.qti.va_aosp.support=1
+
+# Deep Sleep
+pm.sleep_mode=1
+vendor.post_boot.parsed=1s

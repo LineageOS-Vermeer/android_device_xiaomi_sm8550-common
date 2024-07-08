@@ -106,7 +106,7 @@ BOARD_KERNEL_CMDLINE := \
     disable_dma32=on \
     rcu_nocbs=all \
     rcutree.enable_rcu_lazy=1 \
-    mtdoops.fingerprint=$(AOSPA_VERSION)
+    mtdoops.fingerprint=$(LINEAGE_VERSION)
 
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_USES_GENERIC_KERNEL_IMAGE := true

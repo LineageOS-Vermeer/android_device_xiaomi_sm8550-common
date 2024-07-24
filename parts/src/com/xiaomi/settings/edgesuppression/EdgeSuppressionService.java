@@ -18,8 +18,7 @@ import android.util.Log;
 public class EdgeSuppressionService extends Service {
 
     private static final String TAG = "XiaomiPartsEdgeSuppressionService";
-    //private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
-    private static final boolean DEBUG = true;
+    private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
 
     private EdgeSuppressionManager mEdgeSuppressionManager;
 

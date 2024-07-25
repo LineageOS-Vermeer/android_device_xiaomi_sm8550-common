@@ -496,10 +496,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/power/config/kalama/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 
-# Powershare
-PRODUCT_PACKAGES += \
-    vendor.lineage.powershare@1.0-service.xiaomi
-
 # QMI
 PRODUCT_PACKAGES += \
     libcurl.vendor \

@@ -456,7 +456,6 @@ vendor/lib64/libmemutils.so
 vendor/lib64/libqdcm-algo.so
 vendor/lib64/libqdcm-json-mode-parser.so
 vendor/lib64/libqdcm-mode-parser.so
-vendor/lib64/libsdm-color.so;MODULE_SUFFIX=_sm8550;OVERRIDES=libsdm-color
 vendor/lib64/libsdm-disp-vndapis.so;MODULE_SUFFIX=_sm8550;OVERRIDES=libsdm-disp-vndapis
 vendor/lib64/libsdmextension.so;MODULE_SUFFIX=_sm8550;OVERRIDES=libsdmextension
 vendor/lib64/libsnapdragoncolor-manager.so
@@ -473,6 +472,9 @@ vendor/etc/display/LUT.txt
 vendor/etc/display/LUT0.txt
 vendor/etc/display/LUT1.txt
 vendor/etc/display/LUT2.txt
+
+# Display (SDM) - from  rtwo_g-user 14 U1TR34.8-30-13-2-2 5b4b0d-dde58 release-keys
+vendor/lib64/libsdm-color.so|c36b857c03f1ac8e89882fd59812ae501e4c9772
 
 # Display postprocessing
 vendor/bin/hw/vendor.display.color@1.0-service

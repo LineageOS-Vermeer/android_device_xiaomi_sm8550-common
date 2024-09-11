@@ -40,8 +40,8 @@
        significantly, so should be measured on the shipping platform
        with a power meter. -->
   <item name="none">0</item>
-  <item name="screen.on">176</item>  <!-- ~200mA -->
-  <item name="screen.full">460</item>   <!-- ~300mA -->
+  <item name="screen.on.display0">176</item>  <!-- ~200mA -->
+  <item name="screen.full.display0">460</item>   <!-- ~300mA -->
 
   <!-- A list of heterogeneous CPU clusters, where the value for each cluster represents the
        number of CPU cores for that cluster.

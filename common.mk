@@ -424,6 +424,7 @@ PRODUCT_PACKAGES += \
 # Overlays (vendor)
 PRODUCT_PACKAGES += \
     FrameworksResTarget_kalama \
+    Xiaomi8550Nfc \
     SecureElementResTarget_kalama \
     WifiResTarget_kalama \
     WifiResTarget_spf_kalama \
@@ -436,7 +437,6 @@ PRODUCT_PACKAGES += \
     Xiaomi8550CarrierConfigResMiui \
     Xiaomi8550DeviceAsWebcamRes \
     Xiaomi8550Frameworks \
-    Xiaomi8550Nfc \
     Xiaomi8550SecureElement \
     Xiaomi8550Settings \
     Xiaomi8550SystemUI \

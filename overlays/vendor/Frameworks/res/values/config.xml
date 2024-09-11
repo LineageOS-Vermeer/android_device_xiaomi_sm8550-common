@@ -52,18 +52,6 @@
     <!-- Whether the device has the non-standalone (NSA) mode of 5G NR enabled.-->
     <bool name="config_telephony5gNonStandalone">true</bool>
 
-    <!-- Average Current for bluetooth controller when idle. 0 by default-->
-    <integer translatable="false" name="config_bluetooth_idle_cur_ma">4</integer>
-
-    <!-- Average Current for bluetooth controller when receiving. 0 by default-->
-    <integer translatable="false" name="config_bluetooth_rx_cur_ma">18</integer>
-
-    <!-- Average Current for bluetooth controller when transmitting. 0 by default-->
-    <integer translatable="false" name="config_bluetooth_tx_cur_ma">33</integer>
-
-    <!-- Average Current for bluetooth controller. 0 by default-->
-    <integer translatable="false" name="config_bluetooth_operating_voltage_mv">4000</integer>
-
     <!-- Default list of files pinned by the Pinner Service -->
     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
         <item>"/system/framework/arm64/boot-QPerformance.oat"</item>

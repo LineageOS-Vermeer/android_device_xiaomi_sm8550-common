@@ -357,6 +357,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FrameworksResTarget_kalama \
     SecureElementResTarget_kalama \
+    Xiaomi8550Nfc \
     WifiResTarget_kalama \
     WifiResTarget_spf_kalama \
     WifiResTargetMainline_kalama \
@@ -369,9 +370,7 @@ PRODUCT_PACKAGES += \
     Xiaomi8550DeviceAsWebcamRes \
     Xiaomi8550EuiccGoogle \
     Xiaomi8550Frameworks \
-    Xiaomi8550FrameworksAOSPA \
     Xiaomi8550FrameworksEuicc \
-    Xiaomi8550Nfc \
     Xiaomi8550SecureElement \
     Xiaomi8550Settings \
     Xiaomi8550SystemUI \

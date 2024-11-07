@@ -71,21 +71,9 @@ function blob_fixup() {
         product/etc/permissions/vendor.qti.hardware.data.connection-V1*.xml)
             sed -i 's/xml version="2.0"/xml version="1.0"/g' "${2}"
            ;;
-        odm/etc/camera/aivsModel_6C06C006 | odm/lib64/libmialgo_aisn.so)
-            [ "$2" = "" ] && return 0
-            split --bytes=20M -d "${2}" "${2}".part
-            ;;
-        odm/etc/camera/enhance_motiontuning.xml |odm/etc/camera/night_motiontuning.xml | odm/etc/camera/motiontuning.xml)
-            [ "$2" = "" ] && return 0
-            sed -i 's/<?xml=/<?xml /g' "${2}"
-            ;;
         odm/lib64/hw/displayfeature.default.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
-            ;;
-        odm/lib64/libailab_rawhdr.so | odm/lib64/libxmi_high_dynamic_range_cdsp.so)
-            [ "$2" = "" ] && return 0
-            "${ANDROID_ROOT}"/prebuilts/clang/host/linux-x86/clang-r450784e/bin/llvm-strip --strip-debug "${2}"
             ;;
         odm/lib64/libmt@1.3.so)
             [ "$2" = "" ] && return 0

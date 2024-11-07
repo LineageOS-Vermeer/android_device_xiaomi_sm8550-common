@@ -102,6 +102,10 @@ function blob_fixup() {
         vendor/lib64/c2.dolby.client.so)
             "${PATCHELF}" --add-needed "dolbycodec_shim.so" "${2}"
             ;;
+        vendor/lib64/libsnpe_config.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --add-needed "liblog.so" "${2}"
+            ;;
         vendor/lib64/vendor.libdpmframework.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed "libhidlbase_shim.so" "${2}"

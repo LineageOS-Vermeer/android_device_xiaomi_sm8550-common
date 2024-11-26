@@ -89,6 +89,7 @@ PRODUCT_PACKAGES += \
     libagm_compress_plugin \
     libagm_mixer_plugin \
     libagm_pcm_plugin \
+    libaudioroute.vendor \
     libbatterylistener \
     libqcompostprocbundle \
     libqcomvisualizer \

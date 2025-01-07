@@ -5,3 +5,5 @@
 on property:vendor.post_boot.parsed=1
     # Set default thermal profile
     write /sys/class/thermal/thermal_message/sconfig 0
+    # Disable native stats collection service
+    stop statsd

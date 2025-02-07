@@ -1,4 +1,4 @@
-# Unpinned blobs from fuxi_global-user 13 TKQ1.221114.001 V816.0.5.0.UMCMIXM release-keys
+# Unpinned blobs from fuxi_global-user 13 TKQ1.221114.001 OS2.0.2.0.VMCMIXM release-keys
 
 # ACDB
 vendor/etc/acdbdata/IDP_UPD/IDP_UPD_acdb_cal.acdb
@@ -61,6 +61,7 @@ vendor/etc/models/acd/speech.eai
 vendor/etc/audio_cloud_control_white_list.xml
 vendor/lib64/hw/audio.primary.kalama.so;MODULE_SUFFIX=_sm8550;OVERRIDES=audio.primary.kalama
 vendor/lib64/hw/sound_trigger.primary.kalama.so;MODULE_SUFFIX=_sm8550;OVERRIDES=sound_trigger.primary.kalama
+vendor/lib64/hw/gyro_fusion_interface.so
 vendor/lib64/lib_misound_asc.so
 vendor/lib64/libadm.so
 vendor/lib64/libar-acdb.so
@@ -89,6 +90,7 @@ vendor/lib64/libmisfpsop.so
 vendor/lib64/libmisight.so
 vendor/lib64/libmisoundsa.so
 vendor/lib64/libmispowerop.so
+vendor/lib64/libpalclient.so
 vendor/lib64/libqtigefar.so
 vendor/lib64/libresampler.so
 vendor/lib64/libspatializerparamstorage.so
@@ -108,6 +110,7 @@ vendor/etc/audio/sku_kalama/resourcemanager_kalama_cdp.xml
 vendor/etc/audio/sku_kalama/resourcemanager_kalama_grd.xml
 vendor/etc/audio/sku_kalama/resourcemanager_kalama_mtp.xml
 vendor/etc/audio/sku_kalama/resourcemanager_kalama_qrd.xml
+vendor/etc/audio_policy_volumes.xml
 vendor/etc/batching.conf
 vendor/etc/card-defs.xml
 vendor/etc/kvh2xml.xml
@@ -481,6 +484,7 @@ vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 # Displayfeature
 odm/lib64/hw/displayfeature.default.so
 odm/lib64/libMiDispDevManager.so
+odm/lib64/libadaptivehdr.so
 odm/lib64/libcolortempmode.so
 odm/lib64/libdisplaycount.so
 odm/lib64/libdisplaylog.so
@@ -513,6 +517,7 @@ vendor/lib64/libmilut.so
 vendor/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so;MODULE_SUFFIX=_vendor
 
 # Displayfeature (Config)
+vendor/etc/display/LUT.txt
 vendor/etc/display/LUT0.txt
 vendor/etc/display/LUT1.txt
 vendor/etc/display/LUT2.txt
@@ -638,11 +643,8 @@ vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
 # Fingerprint
 odm/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so;MODULE_SUFFIX=_odm
-vendor/bin/hw/vendor.xiaomi.hardware.dtool@1.0-service
-vendor/etc/init/vendor.xiaomi.hardware.dtool@1.0-service.rc
 vendor/etc/vintf/manifest/fod.xml
 vendor/lib64/com.fingerprints.extension@3.0.so
-vendor/lib64/vendor.xiaomi.hardware.dtool@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.fingerprintextension@1.0.so;MODULE_SUFFIX=_vendor
 
 # FM
@@ -656,13 +658,18 @@ vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
 # GNSS
+odm/etc/vintf/manifest/vendor.qti.gnss-service.xml
 odm/etc/izat_device.conf
+odm/lib64/vendor.qti.gnss-V3-ndk.so
+odm/lib64/vendor.qti.gnss-V4-ndk.so
+odm/lib64/vendor.qti.gnss-service.so
 vendor/bin/edgnss-daemon
 vendor/bin/engine-service
 vendor/bin/garden_app
 vendor/bin/loc_launcher
 vendor/bin/lowi-server;DISABLE_CHECKELF
 vendor/bin/mlid
+vendor/bin/slim_daemon;DISABLE_CHECKELF
 vendor/bin/xtra-daemon
 vendor/bin/xtwifi-client
 vendor/etc/init/loc-launcher.rc
@@ -671,9 +678,8 @@ vendor/etc/seccomp_policy/gnss@2.0-edgnss-daemon.policy
 vendor/etc/seccomp_policy/gnss@2.0-qsap-location.policy
 vendor/etc/seccomp_policy/gnss@2.0-xtra-daemon.policy
 vendor/etc/seccomp_policy/gnss@2.0-xtwifi-client.policy
-vendor/etc/vintf/manifest/android.hardware.gnss-aidl-service-qti.xml
-vendor/etc/vintf/manifest/vendor.qti.gnss-service.xml
 vendor/etc/apdr.conf
+vendor/etc/batching.conf
 vendor/etc/gps.conf
 vendor/etc/lowi.conf
 vendor/etc/sap.conf
@@ -693,7 +699,6 @@ vendor/lib64/libgnsspps.so
 vendor/lib64/libgps.utils.so
 vendor/lib64/libizat_client_api.so
 vendor/lib64/libizat_core.so
-vendor/lib64/libjnihelper.so
 vendor/lib64/liblbs_core.so
 vendor/lib64/libloc_api_v02.so
 vendor/lib64/libloc_api_wds.so
@@ -717,12 +722,10 @@ vendor/lib64/liblowi_client.so
 vendor/lib64/liblowi_common.so
 vendor/lib64/liblowi_wifihal.so
 vendor/lib64/libpal_net_if.so
+vendor/lib64/libslimclient.so
 vendor/lib64/libsynergy_loc_api.so
 vendor/lib64/libsys_info_cache.so
 vendor/lib64/libxtadapter.so
-vendor/lib64/vendor.qti.gnss-V3-ndk.so
-vendor/lib64/vendor.qti.gnss-V4-ndk.so
-vendor/lib64/vendor.qti.gnss-service.so
 
 # Graphics (Adreno)
 vendor/app/com.qualcomm.qti.gpudrivers.kalama.api33/com.qualcomm.qti.gpudrivers.kalama.api33.apk
@@ -775,8 +778,8 @@ vendor/gpu/kbc/unified_ksqs.bin
 vendor/lib64/hw/vulkan.adreno.so
 
 # Hotword Enrollment
-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND.apk
 product/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.apk
+product/priv-app/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND.apk
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
@@ -998,8 +1001,51 @@ vendor/lib64/libqnnengine.so
 odm/etc/libnfc-nci.conf:vendor/etc/libnfc-nci.conf
 odm/etc/libnfc-nxp.conf:vendor/etc/libnfc-nxp.conf
 odm/etc/libnfc-nxp_RF.conf:vendor/etc/libnfc-nxp_RF.conf
+odm/etc/libnfc-nxp_RF.conf:vendor/libnfc-nxp_RF.conf
+odm/etc/libnfc-nxp_RF.conf
 vendor/lib64/libsn100u_fw.so
 vendor/lib64/libsn220u_fw.so
+odm/bin/hw/vendor.nxp.hardware.nfc@2.0-service
+odm/etc/init/vendor.nxp.hardware.nfc@2.0-service.rc
+odm/lib64/nfc_nci.nqx.default.hw.so
+vendor/bin/hw/android.hardware.nfc@1.2-service-st
+vendor/bin/nqnfcinfo
+vendor/bin/pnscr
+vendor/bin/pnscr-mi
+vendor/bin/pnscr-rf
+vendor/bin/qsap_voiceui
+vendor/etc/init/android.hardware.nfc@1.2-service-st.rc
+vendor/etc/libnfc-SN220_19_2MHZ.conf
+vendor/etc/libnfc-SN220_38_4MHZ.conf
+vendor/etc/libnfc-hal-st-519_mtp.conf
+vendor/etc/libnfc-hal-st.conf
+vendor/etc/libnfc-mtp-SN100.conf
+vendor/etc/libnfc-mtp-SN100_38_4MHZ.conf
+vendor/etc/libnfc-nxp-pnscr.conf
+vendor/etc/libnfc-qrd-SN100.conf
+vendor/etc/libnfc-qrd-SN100_38_4MHZ.conf
+vendor/etc/sn100u_bootup.pnscr
+vendor/etc/sn100u_ese_disableIso.pnscr
+vendor/etc/sn100u_ese_disableIsoRead.pnscr
+vendor/etc/sn100u_nfcon.pnscr
+vendor/etc/sn100u_pnx_chr.pnscr
+vendor/etc/sn100u_pnx_cui.pnscr
+vendor/etc/sn100u_pnx_ese_3.pnscr
+vendor/etc/sn100u_pnx_ese_3_hce.pnscr
+vendor/etc/sn100u_pnx_ese_aclog.pnscr
+vendor/etc/sn100u_pnx_ese_cplc.pnscr
+vendor/etc/sn100u_pnx_ese_fabkey.pnscr
+vendor/etc/sn100u_pnx_ese_free.pnscr
+vendor/etc/sn100u_pnx_ese_keyset.pnscr
+vendor/etc/sn100u_pnx_ese_sei2c_disable.pnscr
+vendor/etc/sn100u_pnx_ese_sei2c_enable.pnscr
+vendor/etc/sn100u_pnx_ese_sei2c_read.pnscr
+vendor/etc/sn100u_pnx_ese_sn.pnscr
+vendor/etc/sn100u_pnx_ndi.pnscr
+vendor/etc/sn100u_pnx_pcv.pnscr
+vendor/etc/sn100u_pnx_sst.pnscr
+vendor/lib64/nfc_nci.st21nfc.st.so
+vendor/lib64/vendor.nxp.hardware.nfc@2.0.so
 
 # OMX
 vendor/lib64/libAlacSwDec.so
@@ -1257,7 +1303,6 @@ vendor/lib64/libsoc_helper.so
 vendor/lib64/libsoc_helper_jni.so
 
 # QVR
-vendor/bin/hw/qvrservice
 vendor/bin/qvrcameratest
 vendor/bin/qvrdatacapture
 vendor/bin/qvrdatalogger
@@ -1280,10 +1325,8 @@ vendor/lib64/libhalide_hexagon_host.so
 vendor/lib64/libqvr_cam_cdsp_driver_stub.so
 vendor/lib64/libqvr_cdsp_driver_stub.so
 vendor/lib64/libqvr_eyetracking_plugin.so
-vendor/lib64/libqvr_hostcontroller_plugin.so
 vendor/lib64/libqvrcamera_client.qti.so
 vendor/lib64/libqvrcameraplayback.so
-vendor/lib64/libqvrservice.so
 vendor/lib64/libqvrservice_client.qti.so
 vendor/lib64/libqvrservice_ov7251_hvx_tuning.so
 vendor/lib64/libqvrservice_ov9282_hvx_tuning.so
@@ -1880,6 +1923,8 @@ vendor/etc/init/vendor.qti.secure_element@1.2-service.rc
 vendor/lib64/android.hardware.secure_element@1.0-impl.so
 vendor/lib64/libesepmconfig.so
 vendor/lib64/libesesbprovision.so
+vendor/lib64/ls_nq_client.so
+vendor/lib64/se_nq_extn_client.so
 
 # Sensor Communicate
 odm/bin/hw/vendor.xiaomi.sensor.communicate@1.0-service
@@ -2121,3 +2166,4 @@ vendor/lib64/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
 
 # Xiaomi MAC address
 vendor/bin/nv_mac
+vendor/lib64/libxiaomi_qmi.so

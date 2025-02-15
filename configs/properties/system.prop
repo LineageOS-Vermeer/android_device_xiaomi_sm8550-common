@@ -8,3 +8,7 @@ ro.nfc.port=I2C
 
 # QTI
 ro.vendor.qti.va_aosp.support=1
+
+# RKPD
+remote_provisioning.enable_rkpd=true
+remote_provisioning.hostname=remoteprovisioning.googleapis.com

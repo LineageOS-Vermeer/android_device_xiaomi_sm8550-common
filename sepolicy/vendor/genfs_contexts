@@ -12,6 +12,8 @@ genfscon sysfs "/devices/virtual/touch/tp_dev/fod_status" u:object_r:sysfs_tp_fo
 # Touchscreen
 genfscon sysfs "/devices/virtual/touch/touch_dev/gesture_double_tap_enabled" u:object_r:sysfs_tp_touchfeature:s0
 genfscon sysfs "/devices/virtual/touch/touch_dev/gesture_single_tap_enabled" u:object_r:sysfs_tp_touchfeature:s0
+genfscon sysfs "/devices/virtual/touch/touch_dev/gesture_single_tap_state" u:object_r:sysfs_tp_touchfeature:s0
+genfscon sysfs "/devices/virtual/touch/touch_dev/panel_orientation" u:object_r:sysfs_tp_touchfeature:s0
 
 # Wakeup
 genfscon sysfs "/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/wakeup" u:object_r:sysfs_wakeup:s0

@@ -1329,7 +1329,7 @@ vendor/lib64/libtracker_6dof_impl.so
 
 # QXR
 vendor/etc/vintf/manifest/vendor.qti.hardware.qxr-service.xml
-vendor/lib64/vendor.qti.hardware.qxr-V1-ndk.so
+vendor/lib64/vendor.qti.hardware.qxr-V1-ndk.so;MODULE_SUFFIX=_vendor
 
 # RIL (system) - from LA.QSSI.14.0.r1-10000.01-qssi.0
 product/app/ConferenceDialer/ConferenceDialer.apk|58227a65b9cc6e35499d924b2bc123ca554387e3

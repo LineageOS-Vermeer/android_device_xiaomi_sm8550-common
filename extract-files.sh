@@ -79,6 +79,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             sed -i 's/<?xml=/<?xml /g' "${2}"
             ;;
+        odm/lib64/hw/camera.xiaomi.so | odm/lib64/hw/com.qti.chi.override.so | odm/lib64/libmialgoengine.so | odm/lib64/libchifeature2.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --add-needed "libprocessgroup_shim.so" "${2}"
+            ;;
         vendor/bin/init.qti.media.sh)
             [ "$2" = "" ] && return 0
             sed -i "s#build_codename -le \"14\"#build_codename -le \"15\"#" "${2}"

@@ -190,6 +190,8 @@ blob_fixups: blob_fixups_user_type = {
             'xml version="2.0"',
             'xml version="1.0"',
         ),
+    'odm/lib64/nfc_nci.nqx.default.hw.so': blob_fixup()
+        .add_needed('libbase_shim.so'),
     'odm/lib64/libmt@1.3.so': blob_fixup()
         .replace_needed(
             'libcrypto.so',

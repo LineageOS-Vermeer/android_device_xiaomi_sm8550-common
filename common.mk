@@ -547,7 +547,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libhidlbase_shim \
     qcodec2_shim \
-    dolbycodec_shim
+    dolbycodec_shim \
+    libbase_shim
 
 # Telephony
 PRODUCT_PACKAGES += \

@@ -99,6 +99,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libcrypto.so" "libcrypto-v33.so" "${2}"
             ;;
+        odm/lib64/nfc_nci.nqx.default.hw.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
+            ;;
         vendor/bin/hw/android.hardware.security.keymint-service-qti | vendor/lib64/libqtikeymint.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed android.hardware.security.rkp-V3-ndk.so "${2}"

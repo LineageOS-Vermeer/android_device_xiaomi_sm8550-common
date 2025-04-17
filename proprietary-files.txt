@@ -1333,6 +1333,9 @@ vendor/lib64/libtracker_6dof_impl.so
 vendor/etc/vintf/manifest/vendor.qti.hardware.qxr-service.xml
 vendor/lib64/vendor.qti.hardware.qxr-V1-ndk.so;MODULE_SUFFIX=_vendor
 
+# RIL (system-mi)
+system_ext/framework/mirilhook.jar
+
 # RIL (system) - from LA.QSSI.14.0.r1-10000.01-qssi.0
 product/app/ConferenceDialer/ConferenceDialer.apk|58227a65b9cc6e35499d924b2bc123ca554387e3
 product/app/remoteSimLockAuthentication/remoteSimLockAuthentication.apk|6567f6dabf30c38466c2abc942135d301347f81e

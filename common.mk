@@ -454,6 +454,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepcounter.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepdetector.xml
 
+$(call soong_config_set, SENSORS_XIAOMI, USES_DOUBLE_TAP_SENSOR, true)
+$(call soong_config_set, SENSORS_XIAOMI, USES_SINGLE_TAP_SENSOR, true)
+$(call soong_config_set, SENSORS_XIAOMI, USES_UDFPS_SENSOR, true)
+
 # Telephony
 PRODUCT_PACKAGES += \
     extphonelib \

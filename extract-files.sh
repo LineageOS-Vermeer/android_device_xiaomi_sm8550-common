@@ -66,9 +66,11 @@ fi
 function blob_fixup() {
     case "${1}" in
         product/etc/permissions/vendor.qti.hardware.data.connectionaidl-V1-java.xml)
+            [ "$2" = "" ] && return 0
             sed -i 's/xml version="2.0"/xml version="1.0"/g' "${2}"
             ;;
         product/etc/permissions/vendor.qti.hardware.data.connection-V1*.xml)
+            [ "$2" = "" ] && return 0
             sed -i 's/xml version="2.0"/xml version="1.0"/g' "${2}"
            ;;
         odm/lib64/hw/displayfeature.default.so)

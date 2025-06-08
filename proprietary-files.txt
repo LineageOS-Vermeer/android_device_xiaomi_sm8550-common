@@ -1233,7 +1233,6 @@ vendor/lib64/libsubsystem_control.so
 
 # QSAP
 vendor/bin/qsap_dcfd
-vendor/bin/qsap_location
 vendor/bin/qsap_qapeservice
 vendor/bin/qsap_sensors
 vendor/etc/init/dcfd.rc

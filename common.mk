@@ -87,7 +87,7 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     libvolumelistener
 
-AUDIO_HAL_DIR := hardware/qcom-caf/sm8550/audio/primary-hal
+AUDIO_HAL_DIR := vendor/qcom/opensource/audio-hal/primary-hal
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_kalama/audio_policy_configuration.xml \
@@ -220,7 +220,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
 # GPS
-include hardware/qcom-caf/sm8550/gps/gps_vendor_product.mk
+include hardware/qcom/gps/gps_vendor_product.mk
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
@@ -307,7 +307,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 endif
 
 # Media
-include hardware/qcom-caf/sm8550/media/product.mk
+include hardware/qcom/media/product.mk
 
 PRODUCT_PACKAGES += \
     libstagefrighthw

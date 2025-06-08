@@ -184,6 +184,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
 # DLKM
+KERNEL_MODULES_OUT := out/target/product/nuwa/dlkm/lib/modules
+include $(LOCAL_PATH)/kernel/dlkm.mk
+
 TARGET_KERNEL_DLKM_DISABLE := false
 TARGET_KERNEL_DLKM_AUDIO_OVERRIDE := true
 TARGET_KERNEL_DLKM_BT_OVERRIDE := true
@@ -269,9 +272,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
-
-# Kernel
-include $(LOCAL_PATH)/kernel/kernel-platform.mk
 
 # Keymint
 PRODUCT_PACKAGES += \
@@ -502,7 +502,6 @@ PRODUCT_PACKAGES += \
     update_verifier
 
 # USB
-TARGET_BOARD_PLATFORM := kalama
 TARGET_HAS_DIAG_ROUTER := true
 TARGET_KERNEL_VERSION := 5.15
 include vendor/qcom/opensource/usb/vendor_product.mk

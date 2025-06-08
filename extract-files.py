@@ -210,6 +210,11 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libqtikeymint.so',
     ): blob_fixup()
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
+    'system_ext/lib64/libwfdnative.so': blob_fixup()
+        .replace_needed('android.hidl.base@1.0.so', 'libhidlbase.so'),
+    'system_ext/lib64/libwfdservice.so': blob_fixup()
+        .replace_needed('android.media.audio.common.types-V2-cpp.so', 'android.media.audio.common.types-V4-cpp.so')
+        .replace_needed('android.hardware.common-V2-ndk_platform.so', 'android.hardware.common-V2-ndk.so'),
     (
         'vendor/bin/hw/dolbycodec2',
         'vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service',

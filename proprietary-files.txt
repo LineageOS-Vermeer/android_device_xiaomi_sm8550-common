@@ -60,7 +60,6 @@ vendor/etc/models/acd/music.eai
 vendor/etc/models/acd/speech.eai
 vendor/etc/audio_cloud_control_white_list.xml
 vendor/lib64/hw/audio.primary.kalama.so;MODULE_SUFFIX=_sm8550;OVERRIDES=audio.primary.kalama
-vendor/lib64/hw/sound_trigger.primary.kalama.so;MODULE_SUFFIX=_sm8550;OVERRIDES=sound_trigger.primary.kalama
 vendor/lib64/hw/gyro_fusion_interface.so
 vendor/lib64/lib_misound_asc.so
 vendor/lib64/libadm.so
@@ -111,7 +110,6 @@ vendor/etc/audio/sku_kalama/resourcemanager_kalama_grd.xml
 vendor/etc/audio/sku_kalama/resourcemanager_kalama_mtp.xml
 vendor/etc/audio/sku_kalama/resourcemanager_kalama_qrd.xml
 vendor/etc/audio_policy_volumes.xml
-vendor/etc/batching.conf
 vendor/etc/card-defs.xml
 vendor/etc/kvh2xml.xml
 vendor/etc/media_codecs_vendor_audio.xml
@@ -127,7 +125,6 @@ vendor/lib64/soundfx/libquasar.so
 vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
 vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml
-vendor/lib64/libdapparamstorage.so
 vendor/lib64/libdlbdsservice.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
@@ -146,7 +143,6 @@ odm/firmware/cs35l41-dsp1-spk-cali.wmfw
 odm/firmware/cs35l41-dsp1-spk-prot.wmfw
 
 # Audio FX modules
-vendor/lib64/soundfx/libasphere.so
 vendor/lib64/soundfx/libaudiopreprocessing.so
 vendor/lib64/soundfx/libbundlewrapper.so
 vendor/lib64/soundfx/libdlbvol.so
@@ -155,11 +151,9 @@ vendor/lib64/soundfx/libdynproc.so
 vendor/lib64/soundfx/libeffectproxy.so
 vendor/lib64/soundfx/libhwdap.so
 vendor/lib64/soundfx/libldnhncr.so
-vendor/lib64/soundfx/libmisoundfx.so
 vendor/lib64/soundfx/libqcompostprocbundle.so
 vendor/lib64/soundfx/libqcomvisualizer.so
 vendor/lib64/soundfx/libqcomvoiceprocessing.so
-vendor/lib64/soundfx/libquasar.so
 vendor/lib64/soundfx/libreverbwrapper.so
 vendor/lib64/soundfx/libshoebox.so
 vendor/lib64/soundfx/libspatializer.so
@@ -168,7 +162,6 @@ vendor/lib64/soundfx/libswspatializer.so
 vendor/lib64/soundfx/libswvqe.so
 vendor/lib64/soundfx/libvisualizer.so
 vendor/lib64/soundfx/libvolumelistener.so
-vendor/lib64/lib_misound_asc.so
 
 # Batterysecret
 vendor/bin/battery_stats
@@ -766,15 +759,6 @@ vendor/firmware/a740_zap.elf
 vendor/firmware/a740_zap.mdt
 vendor/firmware/gmu_gen70200.bin
 
-# Graphics (Adreno firmware vendor)
-vendor/gpu/kbc/sequence_manifest.bin
-vendor/gpu/kbc/unified_kbcs_32.bin
-vendor/gpu/kbc/unified_kbcs_64.bin
-vendor/gpu/kbc/unified_ksqs.bin
-
-# Graphics (Vulkan)
-vendor/lib64/hw/vulkan.adreno.so
-
 # Hotword Enrollment
 product/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.apk
 product/priv-app/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND.apk
@@ -822,7 +806,7 @@ vendor/lib64/vendor.qti.hardware.limits@1.2.so;MODULE_SUFFIX=_vendor
 # Listen
 vendor/etc/vintf/manifest/manifest_non_qmaa.xml
 vendor/etc/vintf/manifest/manifest_non_qmaa_extn.xml
-vendor/lib64/hw/sound_trigger.primary.kalama.so
+vendor/lib64/hw/sound_trigger.primary.kalama.so;MODULE_SUFFIX=_sm8550;OVERRIDES=sound_trigger.primary.kalama
 vendor/lib64/libeai_fixed.so
 vendor/lib64/libeai_float.so
 vendor/lib64/liblistensoundmodel2vendor.so
@@ -1182,8 +1166,6 @@ vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
 # Psiclient
-vendor/bin/hw/vendor.qti.psiclient@1.0-service
-vendor/etc/init/vendor.qti.psiclient@1.0-service.rc
 
 # QCC
 system_ext/app/QCC/QCC.apk
@@ -1238,7 +1220,6 @@ vendor/etc/qguard.json
 system/etc/sysconfig/qti_whitelist.xml
 system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml
 vendor/bin/irsc_util
-vendor/bin/qcc-trd
 vendor/bin/qmipriod
 vendor/etc/init/init.qdmastats.rc
 vendor/etc/init/qmipriod.rc
@@ -1272,7 +1253,6 @@ vendor/bin/qsap_dcfd
 vendor/bin/qsap_location
 vendor/bin/qsap_qapeservice
 vendor/bin/qsap_sensors
-vendor/bin/qsap_voiceui
 vendor/etc/init/dcfd.rc
 vendor/etc/init/vendor.qsap.location.rc
 vendor/etc/init/vendor.qsap.qapeservice.rc
@@ -1696,7 +1676,6 @@ vendor/etc/init/dataqti.rc
 vendor/etc/init/ims-dataservice-daemon.rc
 vendor/etc/init/ims_rtp_daemon.rc
 vendor/etc/init/imsdaemon.rc
-vendor/etc/init/ipa_fws.rc
 vendor/etc/init/libxiaomi_qcril.rc
 vendor/etc/init/netmgrd.rc
 vendor/etc/init/port-bridge.rc
@@ -1919,8 +1898,6 @@ vendor/lib64/libqcbor.so
 vendor/bin/hw/vendor.qti.secure_element@1.2-service
 vendor/etc/init/vendor.qti.secure_element@1.2-service.rc
 vendor/lib64/android.hardware.secure_element@1.0-impl.so
-vendor/lib64/libesepmconfig.so
-vendor/lib64/libesesbprovision.so
 vendor/lib64/ls_nq_client.so
 vendor/lib64/se_nq_extn_client.so
 
@@ -1947,7 +1924,6 @@ vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
 vendor/etc/sensors/sns_reg_config
 vendor/lib64/hw/sensors.dynamic_sensor_hal.so
 vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
-vendor/lib64/libSensorsInterface.so
 vendor/lib64/libnanopb.so
 vendor/lib64/libsensor_calibration.so
 vendor/lib64/libsensorcal.so
@@ -1998,7 +1974,6 @@ vendor/lib64/libsxrservice.so
 vendor/bin/hw/android.hardware.thermal@2.0-service.qti-v2
 vendor/etc/init/android.hardware.thermal@2.0-service.qti-v2.rc
 vendor/etc/vintf/manifest/android.hardware.thermal@2.0-service.qti.xml
--vendor/lib64/liblmthermallistner.so
 -vendor/lib64/libthermalclient.so
 
 # Thermal Engine
@@ -2092,9 +2067,6 @@ system_ext/etc/init/wfdservice.rc
 system_ext/etc/seccomp_policy/wfdservice.policy
 system_ext/etc/seccomp_policy/wfdservice64.policy
 system_ext/etc/wfdconfigsink.xml
-system_ext/lib64/libmmparser_lite.so
-system_ext/lib64/libmmrtpdecoder.so
-system_ext/lib64/libmmrtpencoder.so
 system_ext/lib64/libwfdavenhancements.so
 system_ext/lib64/libwfdclient.so
 system_ext/lib64/libwfdcommonutils.so

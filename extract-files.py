@@ -173,7 +173,6 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.latency@2.1',
         'vendor.qti.latency@2.2',
         'vendor.qti.latency@2.3',
-        'vendor.xiaomi.hardware.displayfeature@1.0',
         'vendor.xiaomi.hardware.fingerprintextension@1.0',
     ): lib_fixup_vendor_suffix,
     (
@@ -191,11 +190,6 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace(
             'xml version="2.0"',
             'xml version="1.0"',
-        ),
-    'odm/lib64/hw/displayfeature.default.so': blob_fixup()
-        .replace_needed(
-            'libstagefright_foundation.so',
-            'libstagefright_foundation-v33.so',
         ),
     'odm/lib64/libmt@1.3.so': blob_fixup()
         .replace_needed(

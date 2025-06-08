@@ -23,16 +23,23 @@ ufsbsg_cc_defaults {
 }
 
 cc_library {
-    name: "libgptutils.xiaomi_kalama",
+    name: "librecovery_updater",
     vendor: true,
     recovery_available: true,
-    defaults: ["ufsbsg_defaults"],
+    defaults: ["libion_header_paths" ,"ufsbsg_defaults"],
     srcs: [
         "gpt-utils.cpp",
+        "oem-updater.cpp",
         "recovery-ufs-bsg.cpp",
+    ],
+    static_libs: [
+            "libbase",
+            "libedify",
+            "libotautil",
     ],
     shared_libs: [
             "libcutils",
+            "libion",
             "liblog",
             "libz",
     ],

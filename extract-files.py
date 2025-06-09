@@ -216,6 +216,8 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/hw/audio.primary.kalama.so',
     ): blob_fixup()
         .add_needed('libstagefright_foundation-v33.so'),
+    'vendor/bin/pnscr': blob_fixup()
+        .add_needed('libbase_shim.so'),
     'vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy': blob_fixup()
         .add_line_if_missing('setsockopt: 1'),
     'vendor/etc/seccomp_policy/qwesd@2.0.policy': blob_fixup()

@@ -522,18 +522,36 @@ PRODUCT_COPY_FILES += \
 $(call soong_config_set, XIAOMI_VIBRATOR, USE_EFFECT_STREAM, true)
 
 # WiFi
+PRODUCT_VENDOR_MOVE_ENABLED := true
+PRODUCT_SOONG_NAMESPACES += hardware/qcom/wlan/qcwcn
+$(call soong_config_set, wifi, disable_rttv3, true)
+
+# Enable IEEE 802.11ax support
+CONFIG_IEEE80211AX := true
+
+-include device/qcom/wlan/kalama/wlan.mk
+
 PRODUCT_PACKAGES += \
+    android.hardware.wifi-service \
+    fstman \
+    fstman.ini \
     hostapd \
+    hostapd.accept \
+    hostapd.deny \
+    hostapd_cli \
+    hostapd_default.conf \
     libqsap_sdk \
     libwpa_client \
     libwifi-hal-ctrl \
     libwifi-hal-qcom \
+    android.hardware.wifi.supplicant-V1-ndk.vendor \
     vendor.qti.hardware.wifi.hostapd@1.0.vendor \
     vendor.qti.hardware.wifi.hostapd@1.1.vendor \
     vendor.qti.hardware.wifi.hostapd@1.2.vendor \
     vendor.qti.hardware.wifi.supplicant@2.0.vendor \
     vendor.qti.hardware.wifi.supplicant@2.1.vendor \
     vendor.qti.hardware.wifi.supplicant@2.2.vendor \
+    vendor.qti.hardware.wifi.supplicant-V1-ndk.vendor \
     wpa_supplicant \
     wpa_supplicant.conf
 

@@ -9,6 +9,7 @@ import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.widget.CompoundButton
+import android.widget.CompoundButton.OnCheckedChangeListener
 import androidx.appcompat.app.AlertDialog
 import androidx.preference.PreferenceFragmentCompat
 import com.android.settingslib.widget.FooterPreference
@@ -16,7 +17,7 @@ import com.android.settingslib.widget.MainSwitchPreference
 import com.xiaomi.settings.R
 
 class EsimSettingsFragment : PreferenceFragmentCompat(),
-        CompoundButton.OnCheckedChangeListener {
+        OnCheckedChangeListener {
 
     companion object {
         private const val TAG = "EsimSettingsFragment"
@@ -46,7 +47,7 @@ class EsimSettingsFragment : PreferenceFragmentCompat(),
         }
     }
 
-    override fun onCheckedChanged(buttonView: CompoundButton?, isChecked: Boolean) {
+    override fun onCheckedChanged(buttonView: CompoundButton, isChecked: Boolean) {
         if (DEBUG) Log.d(TAG, "onCheckedChanged: $isChecked")
         if (esimController.getEsimActive()) {
             if (isChecked) return

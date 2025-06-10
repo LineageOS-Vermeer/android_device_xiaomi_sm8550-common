@@ -82,6 +82,7 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     audioadsprpcd \
     libbatterylistener \
+    libpalclient \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \

@@ -31,14 +31,6 @@ service ssgqmigd /vendor/bin/ssgqmigd64
     group radio gps system
     socket ssgqmig seqpacket 0660 radio inet
 
-# Sensors
-service citsensor-hal-2-0 /odm/bin/hw/vendor.xiaomi.sensor.citsensorservice@2.0-service
-    class late_start
-    user system
-    group system input
-    override
-    task_profiles ServiceCapacityLow
-
 # Touchscreen
 on boot
     chown system system /sys/class/touch/touch_dev/fod_finger_state

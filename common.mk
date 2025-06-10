@@ -340,6 +340,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml
 
 # Overlays (Qssi)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/partition_order.xml:$(TARGET_COPY_OUT_PRODUCT)/overlay/partition_order.xml
+
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon_Sys \
     FrameworksResCommon_Sys \

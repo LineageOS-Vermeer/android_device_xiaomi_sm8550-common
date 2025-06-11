@@ -13,7 +13,6 @@ import android.os.UserHandle
 import android.util.Log
 import android.view.Display
 import android.view.Display.HdrCapabilities
-import com.xiaomi.settings.display.ColorService
 import com.xiaomi.settings.telephony.EsimController
 import com.xiaomi.settings.touch.TouchOrientationService
 
@@ -38,9 +37,6 @@ class BootCompletedReceiver : BroadcastReceiver() {
     }
 
     private fun onLockedBootCompleted(context: Context) {
-        // Display
-        context.startServiceAsUser(Intent(context, ColorService::class.java), UserHandle.CURRENT)
-
         // Touchscreen
         context.startServiceAsUser(Intent(context, TouchOrientationService::class.java), UserHandle.CURRENT)
 

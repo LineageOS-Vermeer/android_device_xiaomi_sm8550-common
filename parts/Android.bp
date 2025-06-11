@@ -16,7 +16,6 @@ android_app {
         "androidx.preference_preference",
         "SettingsLib",
         "qcrilhook",
-        "vendor.xiaomi.hardware.displayfeature-V1.0-java",
     ],
     required: [
         "privapp_whitelist_com.xiaomi.settings.xml",

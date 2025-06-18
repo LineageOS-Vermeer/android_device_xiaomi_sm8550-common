@@ -60,11 +60,6 @@ BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
 
 BOARD_RAMDISK_USE_LZ4 := true
 
-# Boot control
-SOONG_CONFIG_NAMESPACES += ufsbsg
-SOONG_CONFIG_ufsbsg += ufsframework
-SOONG_CONFIG_ufsbsg_ufsframework := bsg
-
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME ?= kalama
 TARGET_NO_BOOTLOADER := true

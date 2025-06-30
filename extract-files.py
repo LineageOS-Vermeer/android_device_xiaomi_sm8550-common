@@ -197,7 +197,6 @@ blob_fixups: blob_fixups_user_type = {
         'odm/lib64/libmialgoengine.so'
     ): blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
-    (
     'odm/lib64/nfc_nci.nqx.default.hw.so': blob_fixup()
         .add_needed('libbase_shim.so'),
     'odm/lib64/libmt@1.3.so': blob_fixup()

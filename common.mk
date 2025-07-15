@@ -216,7 +216,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
 # GPS
-include hardware/qcom/gps/gps_vendor_product.mk
+include hardware/qcom-caf/sm8550/gps/gps_vendor_product.mk
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
@@ -300,7 +300,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 endif
 
 # Media
-include hardware/qcom/media/product.mk
+include hardware/qcom-caf/sm8550/media/product.mk
 
 PRODUCT_PACKAGES += \
     libstagefrighthw
@@ -533,7 +533,43 @@ $(call soong_config_set, wifi, disable_rttv3, true)
 # Enable IEEE 802.11ax support
 CONFIG_IEEE80211AX := true
 
--include device/qcom/wlan/kalama/wlan.mk
+TARGET_WLAN_CHIP := kiwi kiwi_v2 qca6490
+WLAN_CHIPSET := qca_cld3
+TARGET_MULTI_WLAN := true
+PRODUCT_PACKAGES += $(foreach chip, $(TARGET_WLAN_CHIP), $(WLAN_CHIPSET)_$(chip).ko)
+WIFI_HIDL_FEATURE_AWARE := true
+WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
+
+# Enable SAP + SAP Feature.
+QC_WIFI_HIDL_FEATURE_DUAL_AP := true
+
+# Enable vendor properties.
+PRODUCT_PROPERTY_OVERRIDES += \
+ wifi.aware.interface=wifi-aware0
+
+# Enable STA + STA Feature.
+QC_WIFI_HIDL_FEATURE_DUAL_STA := true
+
+#Disable cnss-daemon QMI communication with FW
+TARGET_USES_NO_FW_QMI_CLIENT := true
+
+#Disable DMS MAC address feature in cnss-daemon
+TARGET_USES_NO_DMS_QMI_CLIENT := true
+
+WLAN_PLATFORM_KBUILD_OPTIONS := CONFIG_CNSS_OUT_OF_TREE=y CONFIG_CNSS2=m \
+    CONFIG_CNSS2_QMI=y CONFIG_CNSS_QMI_SVC=m \
+    CONFIG_CNSS_PLAT_IPC_QMI_SVC=m \
+    CONFIG_CNSS_GENL=m CONFIG_WCNSS_MEM_PRE_ALLOC=m \
+    CONFIG_CNSS_UTILS=m CONFIG_BUS_AUTO_SUSPEND=y \
+    CONFIG_CNSS_HW_SECURE_DISABLE=y \
+    KERNEL_SUPPORTS_NESTED_COMPOSITES=n
+
+PRODUCT_PACKAGES += cnss2.ko
+PRODUCT_PACKAGES += cnss_plat_ipc_qmi_svc.ko
+PRODUCT_PACKAGES += wlan_firmware_service.ko
+PRODUCT_PACKAGES += cnss_nl.ko
+PRODUCT_PACKAGES += cnss_prealloc.ko
+PRODUCT_PACKAGES += cnss_utils.ko
 
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \

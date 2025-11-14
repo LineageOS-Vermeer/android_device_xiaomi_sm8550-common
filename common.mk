@@ -106,7 +106,7 @@ PRODUCT_PACKAGES += \
     lib_bt_aptx \
     lib_bt_ble \
     lib_bt_bundle
-    
+
 # Boot control
 PRODUCT_PACKAGES += \
     android.hardware.boot-service.qti \
@@ -346,15 +346,13 @@ PRODUCT_PACKAGES += \
     update_verifier
 
 # USB
-PRODUCT_PACKAGES += \
-    android.hardware.usb-service.qti \
-    android.hardware.usb.gadget-service.qti \
-    audio.usb.default \
-    usb_compositions.conf
+TARGET_BOARD_PLATFORM := kalama
+TARGET_HAS_DIAG_ROUTER := true
+TARGET_KERNEL_VERSION := 5.15
+include vendor/qcom/opensource/usb/vendor_product.mk
 
 PRODUCT_PACKAGES += \
-    init.qcom.usb.sh \
-    init.qcom.usb.rc
+libusbhost.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
